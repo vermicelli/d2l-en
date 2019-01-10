@@ -11,7 +11,7 @@ learning is and how to use this book.
    :maxdepth: 2
 
    preface
-   deep-learning-intro
+   introduction
    how-to-use
 
 ```
