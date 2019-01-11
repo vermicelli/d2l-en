@@ -1,4 +1,4 @@
-# Getting started with Gluon
+## Installing Gluon
 
 To get started we need to download and install the code needed to run the notebooks. Although skipping this section will not affect your theoretical understanding of sections to come, we strongly recommend that you get some hands-on experience. We believe that modifying and writing code and seeing the results thereof greatly enhances the benefit you can gain from the book. In a nutshell, to get started you need to do the following steps:
 
@@ -8,7 +8,7 @@ To get started we need to download and install the code needed to run the notebo
 1. Build the conda environment to run MXNet and the examples of the book
 
 
-## Conda
+### Conda
 
 For simplicity we recommend [conda](https://conda.io), a popular Python package manager to install all libraries.
 
@@ -29,7 +29,7 @@ unzip d2l-en-1.0.zip
 rm d2l-en-1.0.zip
 ```
 
-## GPU Support
+### GPU Support
 
 By default MXNet is installed without GPU support to ensure that it will run on any computer (including most laptops). If you should be so lucky to have a GPU enabled computer, you should modify the conda environment to download the CUDA enabled build. Obviously you need to have the appropriate drivers installed. In particular you need the following:
 
@@ -47,7 +47,7 @@ cd d2l
 emacs environment.yml
 ```
 
-## Conda Environment
+### Conda Environment
 
 In a nutshell, conda provides a mechanism for setting up a set of Python libraries in a reproducible and reliable manner, ensuring that all software dependencies are satisfied. Here's what is needed to get started.
 
@@ -83,7 +83,7 @@ jupyter notebook
 
 The main difference between Windows and other installations is that for the former you use `activate gluon` whereas for Linux and macOS you use `source activate gluon`. Beyond that, the same considerations as for Windows apply. Install JupyterLab if you need a more powerful environment
 
-## Updating Gluon
+### Updating Gluon
 
 In case you want to update the repository, if you installed a new version of CUDA and (or) MXNet, you can simply use the conda commands to do this. As before, make sure you update the packages accordingly.
 
@@ -92,7 +92,7 @@ cd d2l-en
 conda env update -f environment.yml
 ```
 
-## Summary
+### Summary
 
 * Conda is a Python package manager that ensures that all software dependencies are met.
 * `environment.yml` has the full configuration for the book. All notebooks are available for download or on GitHub.

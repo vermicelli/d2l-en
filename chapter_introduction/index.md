@@ -10,8 +10,6 @@ learning is and how to use this book.
 .. toctree::
    :maxdepth: 2
 
-   preface
    introduction
-   how-to-use
 
 ```
