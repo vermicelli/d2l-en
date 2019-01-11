@@ -13,7 +13,6 @@ the basics.
 .. toctree::
    :maxdepth: 2
 
-   install
    ndarray
    linear-algebra
    autograd
