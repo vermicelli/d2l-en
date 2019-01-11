@@ -248,6 +248,28 @@ in this book in the `gluonbook` package, version number 1.0.0.
 We give a detailed overview of these functions and classes in the appendix [“gluonbook package index”](../chapter_appendix/gluonbook.md)
 
 
+## Target Audience
+
+This book is for students (undergraduate or graduate),
+engineers, and researchers, who seek a solid grasp
+of the practical techniques of deep learning.
+Because we explain every concept from scratch,
+no previous background in deep learning or machine learning is required.
+Fully explaining the methods of deep learning
+requires some mathematics and programming,
+but we'll only assume that you come in with some basics,
+including (the very basics of) linear algebra, calculus, probability,
+and Python programming.
+Moreover, this book's appendix provides a refresher
+on most of the mathematics covered in this book.
+Most of the time, we will prioritize intuition and ideas
+over mathematical rigor.
+There are many terrific books which can lead the interested reader further. For instance [Linear Analysis](https://www.amazon.com/Linear-Analysis-Introductory-Cambridge-Mathematical/dp/0521655773) by Bela Bollobas covers linear algebra and functional analysis in great depth. [All of Statistics](https://www.amazon.com/All-Statistics-Statistical-Inference-Springer/dp/0387402721) is a terrific guide to statistics.
+And if you have not used Python before,
+you may want to peruse the [Python tutorial](http://learnpython.org/).
+
+
+
 ## Forum
 
 Associated with this book, we've launched a discussion forum,
