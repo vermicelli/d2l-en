@@ -33,7 +33,6 @@ teaching you both the *concepts*, the *context*, and the *code*.
 
 ## One Medium Combining Code, Math, and HTML
 
-
 For any computing technology to reach its full impact,
 it must well-understood, well-documented, and supported by
 mature, well-maintained tools.
@@ -50,7 +49,6 @@ has only been realized over the past ten years,
 owing to the development of powerful, well-documented frameworks.
 
 
-
 Realizing deep learning presents unique challenges because
 any single application brings together various disciplines.
 Applying deep learning requires simultaneously understanding
@@ -65,7 +63,6 @@ the mathematics to solve them, and the software tools to implement those
 solutions all in one place presents formidable challenges.
 Our goal in this book is to present a unified resource
 to bring would-be practitioners up to speed.
-
 
 
 We started this book project in July 2017
@@ -119,41 +116,6 @@ While our system is not yet perfect, these choices provide a good compromise
 among the competing concerns.
 We believe that this might be the first book published using such an integrated workflow.
 
-## Organization
-
-Aside from a few preliminary notebooks that provide a crash course
-in the basic mathematical background, each subsequent notebook introduces
-both a reasonable number of new concepts and provides a single
-self-contained working example -- using a real dataset.
-This presents an organizational challenge. Some models might logically
-be grouped together in a single notebook.  And some ideas might be
-best taught by executing several models in succession.  On the other
-hand, there's a big advantage to adhering to a policy of *1 working
-example, 1 notebook*: This makes it as easy as possible for you to
-start your own research projects by leveraging our code. Just copy a
-single notebook and start modifying it.
-
-We will interleave the runnable code with background material as needed.
-In general, we will often err on the side of making tools
-available before explaining them fully (and we will follow up by
-explaining the background later).  For instance, we might use
-*stochastic gradient descent* before fully explaining why it is useful
-or why it works.  This helps to give practitioners the necessary
-ammunition to solve problems quickly, at the expense of requiring the
-reader to trust us with some decisions, at least in the short term.
-
-Throughout, we'll be working with the MXNet library, which has the
-rare property of being flexible enough for research while being fast
-enough for production.  This book will teach deep learning concepts
-from scratch.  Sometimes, we want to delve into fine details about the
-models that are hidden from the user by ``Gluon``'s advanced features.
-This comes up especially in the basic tutorials, where we want you to
-understand everything that happens in a given layer.  In these cases,
-we generally present two versions of the example: one where we
-implement everything from scratch, relying only on NDArray and
-automatic differentiation, and another where we show how to do things
-succinctly with ``Gluon``.  Once we've taught you how a layer works,
-we can just use the ``Gluon`` version in subsequent tutorials.
 
 ## Learning by Doing
 
@@ -171,7 +133,139 @@ that they are needed to accomplish some practical end.
 While we take some time at the outset to teach
 fundamental preliminaries, like linear algebra and probability.
 We want you to taste the satisfaction of training your first model
-before worrying about more exotic probability distributions.
+before worrying about more esoteric probability distributions.
+
+Aside from a few preliminary notebooks that provide a crash course
+in the basic mathematical background,
+each subsequent notebook introduces both a reasonable number of new concepts
+and provides a single self-contained working example -- using a real dataset.
+This presents an organizational challenge.
+Some models might logically be grouped together in a single notebook.
+And some ideas might be best taught by executing several models in succession.
+On the other hand, there's a big advantage to adhering
+to a policy of *1 working example, 1 notebook*:
+This makes it as easy as possible for you to
+start your own research projects by leveraging our code.
+Just copy a notebook and start modifying it.
+
+We will interleave the runnable code with background material as needed.
+In general, we will often err on the side of making tools
+available before explaining them fully (and we will follow up by
+explaining the background later).
+For instance, we might use *stochastic gradient descent*
+before fully explaining why it is useful or why it works.
+This helps to give practitioners the necessary
+ammunition to solve problems quickly,
+at the expense of requiring the reader to trust us with some curatorial decisions.
+
+Throughout, we'll be working with the MXNet library,
+which has the rare property of being flexible enough for research
+while being fast enough for production.
+This book will teach deep learning concepts from scratch.
+Sometimes, we want to delve into fine details about the models
+that would typically be hidden from the user by ``Gluon``'s advanced abstractions.
+This comes up especially in the basic tutorials,
+where we want you to understand everything that happens in a given layer or optimizer.
+In these cases, we'll often present two versions of the example:
+one where we implement everything from scratch,
+relying only on NDArray and automatic differentiation,
+and another, more practical example, where we write succinct code using ``Gluon``.
+Once we've taught you how some component works,
+we can just use the ``Gluon`` version in subsequent tutorials.
+
+
+
+
+## Content and Structure
+
+The book can be roughly divided into three sections:
+
+* The first part covers prerequisites and basics.
+The first chapter offers an [Introduction to Deep Learning](../chapter_introduction/index.md).
+In [Crashcourse](../chapter_crashcourse/index.md),
+we'll quickly bring you up to speed on the prerequisites required for hands-on deep learning,
+such as how to acquire and run the codes covered in the book.
+[Deep Learning Basics](../chapter_deep-learning-basics/index.md)
+covers the most basic concepts and techniques of deep learning,
+such as multi-layer perceptrons and regularization.
+<!--If you are short on time or you only want to learn only
+about the most basic concepts and techniques of deep learning,
+it is sufficient to read the first section only.-->
+* The next three chapters focus on modern deep learning techniques.
+[Deep Learning Computation](../chapter_deep-learning-computation/index.md)
+describes the various key components of deep learning calculations
+and lays the groundwork for the later implementation of more complex models.
+Next we explain [Convolutional Neural Networks](../chapter_convolutional-neural-networks/index.md),
+powerful tools that form the backbone of most modern computer vision systems in recent years.
+Subsequently, we introduce [Recurrent Neural Networks](../chapter_recurrent-neural-networks/index.md),
+models that exloit temporal or sequential structure in data,
+and are commonly used for natural language processing and time series prediction.
+These sections will get you up to speed on the basic tools behind most modern deep learning.
+
+* Part three discusses scalability, efficiency and applications.
+First we discuss several common [Optimization Algorithms](../chapter_optimization/index.md)
+used to train deep learning models.
+The next chapter, [Performance](../chapter_computational-performance/index.md),
+examines several important factors that affect the computational performance of your deep learning code.
+Chapters 9 and 10  illustrate major applications of deep learning
+in computer vision and natural language processing, respectively.
+
+An outline of the book together with possible flows for navigating it is given below.
+The arrows provide a graph of prerequisites:
+
+![Book structure](../img/book-org.svg)
+
+
+## Code
+
+Most sections of this book feature executable code.
+We recognize the importance of an interactive learning experience in deep learning.
+At present certain intuitions can only be developed through trial and error,
+tweaking the code in small ways and observing the results.
+Ideally, an elegant mathematical theory might tell us
+precisely how to tweak our code to achieve a desired result.
+Unfortunately, at present such elegant theories elude us.
+Despite our best attempts, our explanations for of various techniques might be lacking,
+sometimes on account of our shortcomings,
+and equally often on account of the nascent state of the science of deep learning.
+We are hopeful that as the theory of deep learning progresses,
+future editions of this book will be able to provide insights in places the present edition cannot.
+
+Most of the code in this book is based on Apache MXNet.
+MXNet is an open-source framework for deep learning
+and the preferred choice of AWS (Amazon Cloud Services),
+as well as many colleges and companies.
+All of the code in this book has passed tests under MXNet 1.2.0.
+However, due to the rapid development of deep learning,
+some code *in the print edition* may not work properly in future versions of MXNet.
+However, we plan to keep the online version remain up-to-date.
+In case of such problems, please consult the section
+["Installation and Running"](../chapter_prerequisite/install.md)
+to update the code and runtime environment.
+At times, to avoid unnecessary repetition,
+we encapsulate the frequently-imported and referred-to functions, classes, etc.
+in this book in the `gluonbook` package, version number 1.0.0.
+We give a detailed overview of these functions and classes in the appendix [“gluonbook package index”](../chapter_appendix/gluonbook.md)
+
+
+## Forum
+
+Associated with this book, we've launched a discussion forum,
+located at [discuss.mxnet.io](https://discuss.mxnet.io/).
+When you have questions on any section of the book,
+you can find the associated discussion page by scanning the QR code
+at the end of the section to participate in its discussions.
+The authors of this book and broader MXNet developer community
+frequently participate in forum discussions.
+
+## Exercises
+
+1. Register an account on the discussion forum of this book [discuss.mxnet.io](https://discuss.mxnet.io/).
+1. Install Python on your computer.
+
+## Discuss on our Forum
+
+<div id="discuss" topic_id="2311"></div>
 
 
 ## Acknowledgments
